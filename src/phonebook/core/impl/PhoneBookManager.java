@@ -22,19 +22,20 @@ public class PhoneBookManager implements PhoneBook {
     public Optional<String> findNumberByName(String name) {
         return Optional.ofNullable(storage.get(name));
     }
-
-    @Override
-    public String getServiceContact() {
-        return storage.get("Service");
-    }
-
+    
     @Override
     public String getNumberByName(String name) throws DataNotFoundException {
-        String number = storage.get(name);
-        if (number == null) {
-            throw new DataNotFoundException(name);
-        }
-        return number;
+        return findNumberByName(name).orElseThrow(() -> new DataNotFoundException(name));
+    }
+    
+    @Override
+    public Optional<String> getServiceContact() {
+        return findNumberByName("Service");
+    }
+    
+    @Override
+    public void logServiceContact() {
+        System.out.println("Service number: " + findNumberByName("Service"));
     }
 
     @Override

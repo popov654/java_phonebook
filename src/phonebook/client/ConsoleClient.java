@@ -70,8 +70,7 @@ public class ConsoleClient implements Runnable {
                 }
                 break;
             case "service":
-                String number = server.getServiceContact();
-                System.out.println(number != null ? number : "Not found");
+                System.out.println(server.getServiceContact().orElse("Not found"));
                 break; 
             case "quit":
                 System.exit(0);

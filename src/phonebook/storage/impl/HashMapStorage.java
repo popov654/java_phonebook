@@ -1,6 +1,7 @@
 package phonebook.storage.impl;
 
 import java.util.HashMap;
+import java.util.Map;
 import phonebook.storage.Storage;
 
 
@@ -11,7 +12,7 @@ import phonebook.storage.Storage;
  */
 public class HashMapStorage<T> implements Storage<T> {
     
-    private final HashMap<String, T> storage = new HashMap<>();
+    private final Map<String, T> storage = new HashMap<>();
 
     @Override
     public T get(String key) {
