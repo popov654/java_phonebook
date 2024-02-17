@@ -12,7 +12,7 @@ import phonebook.storage.Storage;
  */
 public class PhoneBookManager implements PhoneBook {
     
-    public Storage<String> storage;
+    private final Storage<String> storage;
     
     public PhoneBookManager(Storage<String> storage) {
         this.storage = storage;
