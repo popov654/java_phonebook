@@ -1,5 +1,6 @@
 package phonebook.core;
 
+import phonebook.core.exception.DataNotFoundException;
 import java.util.Optional;
 
 /**

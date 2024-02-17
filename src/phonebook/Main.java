@@ -1,8 +1,8 @@
 package phonebook;
 
-import phonebook.storage.HashMapStorage;
+import phonebook.storage.impl.HashMapStorage;
 import phonebook.client.ConsoleClient;
-import phonebook.core.PhoneBookManager;
+import phonebook.core.impl.PhoneBookManager;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 

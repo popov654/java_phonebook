@@ -1,6 +1,6 @@
 package phonebook.client;
 
-import phonebook.core.DataNotFoundException;
+import phonebook.core.exception.DataNotFoundException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Optional;

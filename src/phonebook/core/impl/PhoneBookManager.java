@@ -1,6 +1,8 @@
-package phonebook.core;
+package phonebook.core.impl;
 
+import phonebook.core.exception.DataNotFoundException;
 import java.util.Optional;
+import phonebook.core.PhoneBook;
 import phonebook.storage.Storage;
 
 

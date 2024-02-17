@@ -1,6 +1,7 @@
-package phonebook.storage;
+package phonebook.storage.impl;
 
 import java.util.HashMap;
+import phonebook.storage.Storage;
 
 
 /**

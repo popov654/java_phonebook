@@ -1,4 +1,4 @@
-package phonebook.core;
+package phonebook.core.exception;
 
 /**
  *
