@@ -14,6 +14,8 @@ public class PhoneBookImpl implements PhoneBook {
     
     private final Storage<String> storage;
     
+    public final String DEFAULT_SERVICE_NUMBER = "123456789";
+    
     public PhoneBookImpl(Storage<String> storage) {
         this.storage = storage;
     }
@@ -29,13 +31,13 @@ public class PhoneBookImpl implements PhoneBook {
     }
     
     @Override
-    public Optional<String> getServiceContact() {
-        return findNumberByName("Service");
+    public String getServiceContact() {
+        return findNumberByName("Service").orElse(DEFAULT_SERVICE_NUMBER);
     }
     
     @Override
     public void logServiceContact() {
-        System.out.println("Service number: " + findNumberByName("Service"));
+        System.out.println("Service number: " + findNumberByName("Service").orElse("No service contact"));
     }
 
     @Override

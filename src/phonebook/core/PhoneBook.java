@@ -13,7 +13,7 @@ public interface PhoneBook {
     
     String getNumberByName(String name) throws DataNotFoundException;
     
-    Optional<String> getServiceContact();
+    String getServiceContact();
     
     void logServiceContact();
     

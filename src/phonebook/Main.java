@@ -2,7 +2,7 @@ package phonebook;
 
 import phonebook.storage.impl.HashMapStorage;
 import phonebook.client.ConsoleClient;
-import phonebook.core.impl.PhoneBookManager;
+import phonebook.core.impl.PhoneBookImpl;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -17,7 +17,7 @@ public class Main {
      */
     public static void main(String[] args) {
         try {
-            ConsoleClient c = new ConsoleClient(new PhoneBookManager(new HashMapStorage<>()));
+            ConsoleClient c = new ConsoleClient(new PhoneBookImpl(new HashMapStorage<>()));
             Thread thread = new Thread(c);
             thread.start();
             thread.join();
