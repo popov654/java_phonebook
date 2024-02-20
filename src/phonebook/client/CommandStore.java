@@ -7,7 +7,7 @@ import phonebook.core.PhoneBook;
  *
  * @author Alex
  */
-public class Commands {
+public class CommandStore {
     
     @FunctionalInterface
     public interface Command {

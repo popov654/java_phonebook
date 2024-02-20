@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.function.BiFunction;
 import java.util.function.Function;
-import phonebook.client.Commands.Command;
+import phonebook.client.CommandStore.Command;
 import phonebook.core.PhoneBook;
 
 /**
@@ -22,12 +22,12 @@ public class ConsoleClient implements Runnable {
     
     public ConsoleClient(PhoneBook server) {
         this.server = server;
-        commands.put("get", Commands::get);
-        commands.put("find", Commands::find);
-        commands.put("put", Commands::put);
-        commands.put("exists", Commands::exists);
-        commands.put("service", Commands::service);
-        commands.put("quit", Commands::quit);
+        commands.put("get", CommandStore::get);
+        commands.put("find", CommandStore::find);
+        commands.put("put", CommandStore::put);
+        commands.put("exists", CommandStore::exists);
+        commands.put("service", CommandStore::service);
+        commands.put("quit", CommandStore::quit);
     }
 
     @Override
